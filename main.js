@@ -5,7 +5,7 @@
  * @Author: PONY ZHANG
  * @Date: 2021-03-08 13:05:18
  * @LastEditors: PONY ZHANG
- * @LastEditTime: 2021-03-10 00:05:18
+ * @LastEditTime: 2021-03-10 23:26:33
  * @motto: 「あなたに逢えなくなって、錆びた時計と泣いたけど…」
  * @topic: # Carry Your World #
  * @Github: Epic-Deno
@@ -17,9 +17,17 @@
 import { createElement, render, Component } from './toy-react'
 
 class MyComponent extends Component {
+    constructor() {
+        super();
+        this.state = {
+            a: 1,
+            b: 2,
+        }
+    }
    render() {
        return <div>
            <h1>my component</h1>
+           <span>{ this.state.a.toString() }</span>
            { this.children }
        </div>
    }
